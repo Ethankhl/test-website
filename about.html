@@ -1,0 +1,472 @@
+<html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - Better Electronics</title>
+  <meta name="description" content="Learn about Better Electronics, a leading provider of laptop replacement batteries with manufacturing facilities in China and distribution centers in the US.">
+  <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#1A73E8',
+            secondary: '#0FA958',
+            dark: '#0F172A',
+            light: '#FFFFFF',
+            'light-gray': '#F5F5F5',
+            'medium-gray': '#DDDDDD',
+            danger: '#E53935'
+          },
+          fontFamily: {
+            sans: ['Inter', 'Arial', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <style type="text/tailwindcss">
+    @layer utilities {
+      .text-shadow {
+        text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      }
+      .transition-all-300 {
+        transition: all 300ms ease-in-out;
+      }
+      .bg-gradient-primary {
+        background: linear-gradient(135deg, #1A73E8 0%, #0d62d0 100%);
+      }
+      .bg-gradient-secondary {
+        background: linear-gradient(135deg, #0FA958 0%, #0d944c 100%);
+      }
+    }
+  </style>
+  <style>
+    /* 自定义滚动动画 */
+    .scroll-animate {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+    
+    .scroll-animate.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+    /* 加载动画 */
+    .loading {
+      display: inline-block;
+      position: relative;
+      width: 80px;
+      height: 80px;
+    }
+    
+    .loading div {
+      position: absolute;
+      border: 4px solid #1A73E8;
+      opacity: 1;
+      border-radius: 50%;
+      animation: loading 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+    }
+    
+    .loading div:nth-child(2) {
+      animation-delay: -0.5s;
+    }
+    
+    @keyframes loading {
+      0% {
+        top: 36px;
+        left: 36px;
+        width: 0;
+        height: 0;
+        opacity: 1;
+      }
+      100% {
+        top: 0px;
+        left: 0px;
+        width: 72px;
+        height: 72px;
+        opacity: 0;
+      }
+    }
+  </style>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&amp;display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Header/Navigation -->
+  <header class="fixed top-0 left-0 right-0 bg-white shadow-md z-50">
+    <div class="container mx-auto px-4 py-3">
+      <nav class="flex justify-between items-center">
+        <a href="index.html" class="logo flex items-center">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="40" height="40">
+            <path d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z" fill="#1A73E8"></path>
+          </svg>
+          <span class="ml-2 text-xl font-bold text-dark">Better Electronics</span>
+        </a>
+        
+        <!-- Desktop Navigation -->
+        <ul class="nav-links hidden md:flex space-x-8">
+          <li><a href="index.html" class="text-gray-700 hover:text-primary transition-all-300">Home</a></li>
+          <li><a href="about.html" class="text-primary font-medium">About</a></li>
+          <li><a href="products.html" class="text-gray-700 hover:text-primary transition-all-300">Products</a></li>
+          <li><a href="sku.html" class="text-gray-700 hover:text-primary transition-all-300">SKU Search</a></li>
+          <li><a href="contact.html" class="text-gray-700 hover:text-primary transition-all-300">Contact</a></li>
+        </ul>
+        
+        <!-- Mobile Menu Button -->
+        <button id="mobileMenuButton" class="md:hidden text-gray-700 focus:outline-none">
+          <i class="fa fa-bars text-2xl"></i>
+        </button>
+      </nav>
+    </div>
+    
+    <!-- Mobile Navigation -->
+    <div id="mobileMenu" class="md:hidden bg-white shadow-lg absolute w-full left-0 top-full transform -translate-y-full opacity-0 transition-all duration-300 ease-in-out">
+      <div class="container mx-auto px-4 py-3">
+        <ul class="space-y-4 py-4">
+          <li><a href="index.html" class="block text-gray-700 hover:text-primary transition-all-300">Home</a></li>
+          <li><a href="about.html" class="block text-primary font-medium">About</a></li>
+          <li><a href="products.html" class="block text-gray-700 hover:text-primary transition-all-300">Products</a></li>
+          <li><a href="sku.html" class="block text-gray-700 hover:text-primary transition-all-300">SKU Search</a></li>
+          <li><a href="contact.html" class="block text-gray-700 hover:text-primary transition-all-300">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section with Background Image -->
+    <section class="relative h-[500px] flex items-center justify-center overflow-hidden">
+      <div class="absolute inset-0 z-0">
+        <img src="https://p11-doubao-search-sign.byteimg.com/labis/image/437e33431751027b556192e6919924b3~tplv-be4g95zd3a-image.jpeg?rk3s=542c0f93&amp;x-expires=1779604545&amp;x-signature=%2BVkc%2BTDZmvAhp2z4hnxi33JTXzk%3D" alt="Modern manufacturing facility" class="w-full h-full object-cover">
+        <div class="absolute inset-0 bg-dark bg-opacity-60"></div>
+      </div>
+      <div class="container mx-auto px-4 z-10 text-center">
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 text-shadow">About Better Electronics</h1>
+        <p class="text-xl md:text-2xl text-white max-w-3xl mx-auto">Delivering high-quality laptop replacement batteries with manufacturing excellence and global distribution</p>
+      </div>
+    </section>
+
+    <!-- Company Introduction -->
+    <section class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="w-full">
+          <h2 class="text-3xl font-bold text-dark mb-6 scroll-animate">Our Story</h2>
+          <p class="text-gray-700 mb-4 scroll-animate">Better Electronics was founded with a mission to provide high-quality laptop replacement batteries at competitive prices. We recognized a need in the market for reliable, long-lasting batteries that meet or exceed original equipment manufacturer (OEM) specifications.</p>
+          <p class="text-gray-700 mb-8 scroll-animate">Today, we are a leading provider of laptop batteries with a global presence, serving both consumers and businesses with our extensive product range.</p>
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 scroll-animate">
+            <div class="bg-light-gray p-4 rounded-lg flex items-center">
+              <i class="fa fa-check-circle text-primary text-2xl mr-3"></i>
+              <span>10+ Years of Experience</span>
+            </div>
+            <div class="bg-light-gray p-4 rounded-lg flex items-center">
+              <i class="fa fa-check-circle text-primary text-2xl mr-3"></i>
+              <span>500+ Battery Models</span>
+            </div>
+            <div class="bg-light-gray p-4 rounded-lg flex items-center">
+              <i class="fa fa-check-circle text-primary text-2xl mr-3"></i>
+              <span>US Distribution Network</span>
+            </div>
+            <div class="bg-light-gray p-4 rounded-lg flex items-center">
+              <i class="fa fa-check-circle text-primary text-2xl mr-3"></i>
+              <span>Factory Direct Shipping</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Manufacturing Excellence -->
+    <section class="py-16 bg-light-gray">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold text-dark mb-4 scroll-animate">Manufacturing Excellence</h2>
+          <p class="text-gray-700 max-w-3xl mx-auto scroll-animate">State-of-the-art facilities and rigorous quality control processes ensure our batteries meet the highest standards</p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all-300 scroll-animate">
+            <div class="bg-primary bg-opacity-10 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+              <i class="fa fa-industry text-primary text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-3">Advanced Facilities</h3>
+            <p class="text-gray-700">Our manufacturing facilities in China feature the latest technology and automation to ensure consistent quality and efficiency.</p>
+          </div>
+          
+          <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all-300 scroll-animate" style="transition-delay: 0.1s;">
+            <div class="bg-primary bg-opacity-10 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+              <i class="fa fa-flask text-primary text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-3">Rigorous Testing</h3>
+            <p class="text-gray-700">Each battery undergoes extensive testing for performance, safety, and longevity before it reaches our customers.</p>
+          </div>
+          
+          <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all-300 scroll-animate" style="transition-delay: 0.2s;">
+            <div class="bg-primary bg-opacity-10 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+              <i class="fa fa-certificate text-primary text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-3">Quality Certifications</h3>
+            <p class="text-gray-700">Our products meet international quality standards and certifications, ensuring reliability and safety.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Battery Production -->
+    <section class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-col lg:flex-row items-center gap-12">
+          <div class="w-full lg:w-1/2 scroll-animate">
+            <img src="https://p11-doubao-search-sign.byteimg.com/ecom-shop-material/png_m_56fc7c6a87055fc4539e4b69d401c0d3_sx_219886_www1000-1000~tplv-be4g95zd3a-image.jpeg?rk3s=542c0f93&amp;x-expires=1779605551&amp;x-signature=9e26VvR%2F0tgt1KaYG84WP57%2B92Q%3D" alt="Dell Li-ion Battery" class="w-full h-auto rounded-lg shadow-xl">
+          </div>
+          <div class="w-full lg:w-1/2">
+            <h2 class="text-3xl font-bold text-dark mb-6 scroll-animate">Specialized Battery Production</h2>
+            <p class="text-gray-700 mb-4 scroll-animate">We specialize in manufacturing high-quality replacement batteries for a wide range of laptop brands, including Dell, HP, Lenovo, Apple, Asus, Acer, and Panasonic.</p>
+            <p class="text-gray-700 mb-6 scroll-animate">Our batteries are designed to meet or exceed OEM specifications, providing customers with reliable performance and extended laptop usage time.</p>
+            
+            <div class="grid grid-cols-2 gap-4 scroll-animate">
+              <div class="flex items-center">
+                <i class="fa fa-check text-secondary mr-2"></i>
+                <span>High Capacity Cells</span>
+              </div>
+              <div class="flex items-center">
+                <i class="fa fa-check text-secondary mr-2"></i>
+                <span>Overcharge Protection</span>
+              </div>
+              <div class="flex items-center">
+                <i class="fa fa-check text-secondary mr-2"></i>
+                <span>Short Circuit Prevention</span>
+              </div>
+              <div class="flex items-center">
+                <i class="fa fa-check text-secondary mr-2"></i>
+                <span>Temperature Control</span>
+              </div>
+              <div class="flex items-center">
+                <i class="fa fa-check text-secondary mr-2"></i>
+                <span>Long Lifespan</span>
+              </div>
+              <div class="flex items-center">
+                <i class="fa fa-check text-secondary mr-2"></i>
+                <span>Environmentally Friendly</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+
+    <!-- Global Distribution -->
+    <section class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold text-dark mb-4 scroll-animate">Global Distribution</h2>
+          <p class="text-gray-700 max-w-3xl mx-auto scroll-animate">Strategically located distribution centers ensure fast and efficient delivery to customers worldwide</p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          <div>
+            <h3 class="text-2xl font-semibold mb-4 scroll-animate">US Distribution Center</h3>
+            <p class="text-gray-700 mb-4 scroll-animate">Our US-based distribution center allows us to provide fast shipping to customers across North America. Most orders are processed and shipped within 24 hours.</p>
+            <p class="text-gray-700 mb-6 scroll-animate">With our extensive inventory, we can fulfill orders of any size, from individual consumers to large corporate clients.</p>
+            
+            <div class="flex items-center mb-4 scroll-animate">
+              <i class="fa fa-map-marker text-primary text-xl mr-3"></i>
+              <span>
+</span>
+            </div>
+            <div class="flex items-center scroll-animate">
+              <i class="fa fa-truck text-primary text-xl mr-3"></i>
+              <span>Fast shipping in US, support factory directing ordering globally</span>
+            </div>
+          </div>
+          
+          <div>
+            <img src="https://p11-doubao-search-sign.byteimg.com/ecom-shop-material/jpeg_m_b8e6d35c080ed72bc736cfbc15dc36ee_sx_114584_www800-800~tplv-be4g95zd3a-image.jpeg?rk3s=542c0f93&amp;x-expires=1779604554&amp;x-signature=RWhFpoU3QTruwyj3NRv0HWLBQb4%3D" alt="Distribution center" class="w-full h-auto rounded-lg shadow-xl scroll-animate">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+
+    <!-- Call to Action -->
+    <section class="py-16 bg-gradient-primary text-white">
+      <div class="container mx-auto px-4 text-center">
+        <h2 class="text-3xl font-bold mb-6 scroll-animate">Partner With Us</h2>
+        <p class="text-xl mb-8 max-w-3xl mx-auto scroll-animate">Whether you're looking for replacement batteries or interested in OEM partnership opportunities, we're here to help.</p>
+        <div class="flex flex-col sm:flex-row justify-center gap-4 scroll-animate">
+          <a href="contact.html" class="bg-white text-primary hover:bg-opacity-90 px-8 py-3 rounded-lg font-semibold transition-all-300">Contact Our Team</a>
+          <a href="products.html" class="bg-white text-primary border-2 border-white hover:bg-primary hover:text-white px-8 py-3 rounded-lg font-semibold transition-all-300">Explore Our Products</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white py-12">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div>
+          <h3 class="text-xl font-bold mb-4">Better Electronics</h3>
+          <p class="text-gray-400 mb-4">Leading provider of high-quality laptop replacement batteries with manufacturing facilities in China and distribution centers in the US.</p>
+          <div class="flex space-x-4">
+            <a href="#" class="text-gray-400 hover:text-white transition-all-300">
+              <i class="fa fa-facebook"></i>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-white transition-all-300">
+              <i class="fa fa-twitter"></i>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-white transition-all-300">
+              <i class="fa fa-linkedin"></i>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-white transition-all-300">
+              <i class="fa fa-instagram"></i>
+            </a>
+          </div>
+        </div>
+        
+        <div>
+          <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+          <ul class="space-y-2">
+            <li><a href="index.html" class="text-gray-400 hover:text-white transition-all-300">Home</a></li>
+            <li><a href="about.html" class="text-gray-400 hover:text-white transition-all-300">About Us</a></li>
+            <li><a href="products.html" class="text-gray-400 hover:text-white transition-all-300">Products</a></li>
+            <li><a href="sku.html" class="text-gray-400 hover:text-white transition-all-300">SKU Search</a></li>
+            <li><a href="contact.html" class="text-gray-400 hover:text-white transition-all-300">Contact</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h3 class="text-xl font-bold mb-4">Products</h3>
+          <ul class="space-y-2">
+            <li><a href="products.html#dell" class="text-gray-400 hover:text-white transition-all-300">Dell Batteries</a></li>
+            <li><a href="products.html#hp" class="text-gray-400 hover:text-white transition-all-300">HP Batteries</a></li>
+            <li><a href="products.html#lenovo" class="text-gray-400 hover:text-white transition-all-300">Lenovo Batteries</a></li>
+            <li><a href="products.html#apple" class="text-gray-400 hover:text-white transition-all-300">Apple Batteries</a></li>
+            <li><a href="products.html#other" class="text-gray-400 hover:text-white transition-all-300">Other Brands</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h3 class="text-xl font-bold mb-4">Contact Us</h3>
+          <ul class="space-y-3">
+            <li class="flex items-center">
+              <i class="fa fa-phone mr-3 text-primary"></i>
+              <span class="text-gray-400">+1 516 779 0746</span>
+            </li>
+            <li class="flex items-center">
+              <i class="fa fa-envelope mr-3 text-primary"></i>
+              <span class="text-gray-400">info@batteryeasttech.com</span>
+            </li>
+          </ul>
+          <form class="mt-4" id="subscribeForm">
+            <div class="flex">
+              <input type="email" placeholder="Your email" class="px-4 py-2 w-full rounded-l-lg focus:outline-none text-dark">
+              <button type="submit" class="bg-primary hover:bg-blue-700 text-white px-4 py-2 rounded-r-lg transition-all-300">
+                Subscribe
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+      
+      <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+        <p>© 2025 Better Electronics. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 通知组件 -->
+  <div class="notification fixed bottom-4 right-4 transform translate-y-10 opacity-0 transition-all duration-300" id="notification">
+    <div class="bg-white shadow-lg rounded-lg p-4 max-w-sm">
+      <div class="flex items-start">
+        <div class="flex-shrink-0">
+          <i class="fa fa-check-circle text-secondary text-xl"></i>
+        </div>
+        <div class="ml-3">
+          <p id="notificationMessage" class="text-sm font-medium text-gray-800"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // 移动端菜单功能
+    document.getElementById('mobileMenuButton').addEventListener('click', function() {
+      const mobileMenu = document.getElementById('mobileMenu');
+      if (mobileMenu.classList.contains('-translate-y-full')) {
+        mobileMenu.classList.remove('-translate-y-full', 'opacity-0');
+        mobileMenu.classList.add('translate-y-0', 'opacity-100');
+      } else {
+        mobileMenu.classList.add('-translate-y-full', 'opacity-0');
+        mobileMenu.classList.remove('translate-y-0', 'opacity-100');
+      }
+    });
+
+    // 滚动动画
+    function handleScrollAnimation() {
+      const elements = document.querySelectorAll('.scroll-animate');
+      
+      elements.forEach(element => {
+        const elementTop = element.getBoundingClientRect().top;
+        const elementVisible = 150;
+        
+        if (elementTop < window.innerHeight - elementVisible) {
+          element.classList.add('active');
+        }
+      });
+    }
+
+    // 页面加载时和滚动时触发动画
+    window.addEventListener('load', handleScrollAnimation);
+    window.addEventListener('scroll', handleScrollAnimation);
+
+    // 通知功能
+    function showNotification(message, isError = false) {
+      const notification = document.getElementById('notification');
+      const notificationMessage = document.getElementById('notificationMessage');
+      const icon = notification.querySelector('i');
+      
+      notificationMessage.textContent = message;
+      
+      if (isError) {
+        notification.classList.add('error');
+        notification.classList.remove('success');
+        icon.className = 'fa fa-exclamation-circle text-danger text-xl';
+      } else {
+        notification.classList.add('success');
+        notification.classList.remove('error');
+        icon.className = 'fa fa-check-circle text-secondary text-xl';
+      }
+      
+      notification.classList.remove('translate-y-10', 'opacity-0');
+      notification.classList.add('translate-y-0', 'opacity-100');
+      
+      setTimeout(() => {
+        notification.classList.add('translate-y-10', 'opacity-0');
+        notification.classList.remove('translate-y-0', 'opacity-100');
+      }, 3000);
+    }
+
+    // 订阅表单功能
+    document.getElementById('subscribeForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const emailInput = this.querySelector('input[type="email"]');
+      const email = emailInput.value.trim();
+      
+      if (email && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        showNotification('Thank you for subscribing!');
+        emailInput.value = '';
+      } else {
+        showNotification('Please enter a valid email address.', true);
+      }
+    });
+  </script>
+
+
+</body></html>

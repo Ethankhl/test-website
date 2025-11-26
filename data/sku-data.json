@@ -1,0 +1,45 @@
+[
+  {"Brand": "Acer", "TYPE": "ACER 50.29WH AP18C8K"},
+  {"Brand": "Acer", "TYPE": "ACER 58.75WH AP18E7M"},
+
+  {"Brand": "ASUS", "TYPE": "Asus 38wh C21N1518"},
+  {"Brand": "ASUS", "TYPE": "Asus 38WH C21N1309"},
+  {"Brand": "ASUS", "TYPE": "Asus 50Wh C21N1818"},
+  {"Brand": "ASUS", "TYPE": "Asus 42WH C31N1637"},
+  {"Brand": "ASUS", "TYPE": "Asus 62WH C41N2013"},
+  {"Brand": "ASUS", "TYPE": "AU C31N1815"},
+  {"Brand": "ASUS", "TYPE": "AU B31N1424"},
+
+  {"Brand": "DELL", "TYPE": "DELL 58Wh FK0VR"},
+  {"Brand": "DELL", "TYPE": "DELL 54wh R73TC"},
+  {"Brand": "DELL", "TYPE": "DELL 52wh 7V69Y"},
+  {"Brand": "DELL", "TYPE": "DELL 68Wh H5H20-Y"},
+  {"Brand": "DELL", "TYPE": "DELLL 64WH GRT01"},
+  {"Brand": "DELL", "TYPE": "Dell TVKGH-Y"},
+  {"Brand": "DELL", "TYPE": "Dell H5H20"},
+  {"Brand": "DELL", "TYPE": "Dell T0TRM"},
+  {"Brand": "DELL", "TYPE": "Dell JK6Y6"},
+
+  {"Brand": "HP", "TYPE": "HP 72.9wh BN06XL"},
+  {"Brand": "HP", "TYPE": "HP 96wh AI06XL"},
+  {"Brand": "HP", "TYPE": "HP YB06XL NEW"},
+  {"Brand": "HP", "TYPE": "HP 41.9WH GB02XL"},
+  {"Brand": "HP", "TYPE": "HP 41.9WH GM02XL"},
+  {"Brand": "HP", "TYPE": "HP 52.5Wh SS03XL"},
+
+  {"Brand": "Lenovo", "TYPE": "LENOVO Y460"},
+  {"Brand": "Lenovo", "TYPE": "LENOVO L19M3PD3"},
+  {"Brand": "Lenovo", "TYPE": "LENOVO 60WH L14M4P72"},
+  {"Brand": "Lenovo", "TYPE": "Lenovo 51WH L18L3P73"},
+  {"Brand": "Lenovo", "TYPE": "Lenovo 55WH L21B4P71"},
+  {"Brand": "Lenovo", "TYPE": "Lenovo 81Wh L23B2PK0"},
+
+  {"Brand": "Panasonic", "TYPE": "Panasonic 87WH CF-VZSU46"},
+  {"Brand": "Panasonic", "TYPE": "Panasonic FZ-VZSU94U"},
+  {"Brand": "Panasonic", "TYPE": "Panasonic FZ-VZSU95R"},
+
+  {"Brand": "Apple", "TYPE": "Mac A2171"},
+  {"Brand": "Apple", "TYPE": "Mac A1713"},
+  {"Brand": "Apple", "TYPE": "Mac A1820"},
+  {"Brand": "Apple", "TYPE": "Mac A1819"}
+]
