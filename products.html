@@ -125,6 +125,9 @@
         <button type="button" data-brand="Asus">Asus</button>
         <button type="button" data-brand="Acer">Acer</button>
         <button type="button" data-brand="Panasonic">Panasonic</button>
+        <button type="button" data-brand="Samsung">Samsung</button>
+        <button type="button" data-brand="Charger">Chargers</button>
+        <button type="button" data-brand="Accessory">Accessories</button>
       </div>
 
       <!-- SKU table -->
@@ -243,7 +246,7 @@
         skuData = jsonData.map(item => ({
           brand: item.Brand || item.brand || '',
           type: item.TYPE || item.type || '',
-          stock: 'on US stock'
+          stock: item.Stock || item.stock || 'on US stock'
         }));
       } catch (e) {
         console.error('SKU data load failed, using fallback:', e);
