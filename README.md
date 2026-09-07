@@ -7,9 +7,7 @@ This repository contains the source code for the Better Electronics website, a c
 ```
 better-electronics/
 ├── index.html          # Homepage
-├── about.html          # About Us page
-├── products.html       # Products page
-├── sku.html            # SKU Search page
+├── products.html       # Products + SKU Search page
 ├── contact.html        # Contact page
 ├── css/
 │   └── style.css       # Main stylesheet
@@ -62,18 +60,16 @@ The SKU data is stored in `data/sku-data.json` and `data/sku-data.csv`. To updat
 
 ## Contact Information
 
-- Phone: +1 516 779 0746
-- Email: info@batteryeasttech.com
-- Contact Person: Kelvin Lim (Sales Manager, Exclusive Sales Representative)
+- Global Sales Manager: Simon Lim — Facebook / WhatsApp buttons on contact page (links TBD)
+- US Sales Manager: Kelvin Lim — Facebook / WhatsApp buttons on contact page (links TBD)
+- Company Facebook: https://www.facebook.com/share/1CUd6WaAW6/?mibextid=wwXIfr
 
 ## Deployment
 
 This website is ready for deployment. The production-ready files are:
 
 - index.html (Homepage)
-- about.html (About Us)
-- products.html (Products)
-- sku.html (SKU Search)
+- products.html (Products + SKU Search)
 - contact.html (Contact)
 - css/style.css (Styles)
 - js/script.js (JavaScript)

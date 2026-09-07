@@ -10,10 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
   
   // 初始化地区检测（如果页面有联系功能）
   initRegionDetection();
-  
-  // 初始化订阅表单功能（如果页面有订阅表单）
-  initNewsletterForm();
-  
+
   // 初始化品牌点击功能（如果页面有品牌模块）
   initBrandClick();
   
@@ -197,44 +194,22 @@ function initRegionDetection() {
   detectRegionAndRecommendWhatsApp();
 }
 
-// 初始化订阅表单功能
-function initNewsletterForm() {
-  const newsletterForms = document.querySelectorAll('.newsletter-form');
-  
-  // 如果页面没有订阅表单，不执行
-  if (newsletterForms.length === 0) return;
-  
-  newsletterForms.forEach(form => {
-    form.addEventListener('submit', function(e) {
-      e.preventDefault();
-      
-      const emailInput = form.querySelector('.newsletter-input');
-      const email = emailInput.value.trim();
-      
-      if (email && validateEmail(email)) {
-        // 模拟表单提交
-        alert('Thank you for subscribing to our newsletter!');
-        emailInput.value = '';
-      } else {
-        alert('Please enter a valid email address.');
-      }
-    });
-  });
-}
-
-// 品牌点击功能
+// 品牌点击功能（products 页合并 SKU 搜索后：点击品牌卡片原地过滤表格并滚动）
 function initBrandClick() {
   const brandItems = document.querySelectorAll('.brand-item');
-  
+
   // 如果页面没有品牌模块，不执行
   if (brandItems.length === 0) return;
-  
+
   brandItems.forEach(item => {
     item.addEventListener('click', function() {
       const brand = this.getAttribute('data-brand');
-      
-      // 跳转到SKU列表页面，并传递品牌参数
-      window.location.href = `sku.html?brand=${encodeURIComponent(brand)}`;
+
+      const skuSection = document.getElementById('sku-search');
+      if (skuSection && typeof window.setBrandFilter === 'function') {
+        // 同页 SKU 表格存在：原地过滤并滚动过去
+        window.setBrandFilter(brand, true);
+      }
     });
   });
 }
