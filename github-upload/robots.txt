@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://batteryeasttech.com/sitemap.xml
