@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Products - Better Electronics</title>
+  <meta name="description" content="Browse our selection of high-quality laptop replacement batteries for various brands including Dell, HP, Lenovo, and more.">
+  <link rel="canonical" href="https://batteryeasttech.com/products.html">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<body>
+  <!-- Header/Navigation -->
+  <header>
+    <div class="container">
+      <nav>
+        <a href="index.html" class="logo">
+          <img src="assets/logo.png" alt="Better Electronics logo" width="40" height="40">
+          Better Electronics
+        </a>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html" class="active">Products</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Products Section -->
+  <section class="products">
+    <div class="container">
+      <h1 class="scroll-animate">Our Products</h1>
+      <p class="scroll-animate mb-6">We offer a wide range of high-quality laptop replacement batteries for various brands. Each battery is designed to meet or exceed original specifications.</p>
+      <div class="bg-blue-50 border-l-4 border-primary p-4 max-w-2xl mx-auto text-left mb-12">
+        <div class="flex">
+          <div class="flex-shrink-0">
+            <i class="fa fa-info-circle text-primary"></i>
+          </div>
+          <div class="ml-3">
+            <p class="text-sm text-gray-700">
+              <strong>Note:</strong> The products displayed here only represent a portion of our US stock inventory. For other SKUs not shown, we offer priority scheduling for warehouse stocking or direct factory shipping options. Please <a href="contact.html" class="text-primary hover:underline font-medium">contact us</a> for more information on specific models and delivery timelines.
+            </p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="product-grid">
+        <div class="product-item scroll-animate brand-item" data-brand="Acer">
+          <h3>Acer Series</h3>
+          <p>Affordable batteries for Acer Aspire, Swift, Nitro, and Predator laptops.</p>
+        </div>
+        
+        <div class="product-item scroll-animate brand-item" data-brand="Apple">
+          <h3>Apple Series</h3>
+          <p>Premium batteries for MacBook Pro, MacBook Air, and MacBook models.</p>
+        </div>
+        
+        <div class="product-item scroll-animate brand-item" data-brand="Asus">
+          <h3>Asus Series</h3>
+          <p>Long-lasting batteries for Asus ZenBook, VivoBook, TUF Gaming, and ROG laptops.</p>
+        </div>
+        
+        <div class="product-item scroll-animate brand-item" data-brand="Dell">
+          <h3>Dell Series</h3>
+          <p>Replacement batteries for Dell Latitude, Inspiron, XPS, and Precision series laptops.</p>
+        </div>
+        
+        <div class="product-item scroll-animate brand-item" data-brand="HP">
+          <h3>HP Series</h3>
+          <p>High-performance batteries for HP Pavilion, EliteBook, ProBook, and Envy laptops.</p>
+        </div>
+        
+        <div class="product-item scroll-animate brand-item" data-brand="Lenovo">
+          <h3>Lenovo Series</h3>
+          <p>Reliable batteries for Lenovo ThinkPad, IdeaPad, Yoga, and Legion series laptops.</p>
+        </div>
+        
+        <div class="product-item scroll-animate brand-item" data-brand="Panasonic">
+          <h3>Panasonic Series</h3>
+          <p>High-performance batteries for Panasonic Toughbook and Let's Note laptops.</p>
+        </div>
+      </div>
+      
+      <div class="cta-buttons" style="margin-top: 2rem; text-align: center;">
+        <a href="#sku-search" class="btn">Search by SKU</a>
+        <a href="contact.html" class="btn btn-secondary">Wholesale Inquiry</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKU Search Section (merged from former sku.html) -->
+  <section class="sku-search-section" id="sku-search" style="padding: 64px 0; background: #f5f7fa;">
+    <div class="container">
+      <div class="section-header text-center mb-12">
+        <h2 class="scroll-animate">Search Our SKU Database</h2>
+        <p class="scroll-animate">Find the exact battery you need by searching our comprehensive SKU database. We offer replacement batteries for all major laptop brands.</p>
+      </div>
+
+      <!-- Search box -->
+      <div class="sku-search-box">
+        <div class="sku-search-field">
+          <input type="text" id="skuSearch" placeholder="Search by SKU, brand, or type..." autocomplete="off">
+          <button type="button" class="sku-search-btn" aria-label="Search">
+            <i class="fa fa-search"></i>
+          </button>
+        </div>
+        <div id="searchResults" class="search-results"></div>
+      </div>
+
+      <!-- Brand filter chips -->
+      <div class="sku-brand-filter" id="brandFilter">
+        <button type="button" class="active" data-brand="">All Brands</button>
+        <button type="button" data-brand="Dell">Dell</button>
+        <button type="button" data-brand="HP">HP</button>
+        <button type="button" data-brand="Lenovo">Lenovo</button>
+        <button type="button" data-brand="Apple">Apple</button>
+        <button type="button" data-brand="Asus">Asus</button>
+        <button type="button" data-brand="Acer">Acer</button>
+        <button type="button" data-brand="Panasonic">Panasonic</button>
+        <button type="button" data-brand="Samsung">Samsung</button>
+        <button type="button" data-brand="Charger">Chargers</button>
+        <button type="button" data-brand="Accessory">Accessories</button>
+      </div>
+
+      <!-- SKU table -->
+      <div class="sku-table-wrap">
+        <h3 id="brandTitle" class="sku-table-title">All SKUs</h3>
+        <div class="sku-table-scroll">
+          <table class="sku-table">
+            <thead>
+              <tr>
+                <th>Brand</th>
+                <th>Type</th>
+                <th>US Stock</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody id="skuTableBody"></tbody>
+          </table>
+        </div>
+        <p class="sku-table-empty" id="skuEmpty" hidden>No SKUs match your filter.</p>
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <!-- Company Info -->
+        <div class="footer-column">
+          <div class="footer-logo">
+            <a href="index.html" class="logo">
+              <img src="assets/logo.png" alt="Better Electronics logo" width="40" height="40">
+              Better Electronics
+            </a>
+          </div>
+          <p>Providing high-quality laptop replacement batteries, US distribution, and OEM wholesale services.</p>
+          <div class="social-links">
+            <a href="https://www.facebook.com/share/1CUd6WaAW6/?mibextid=wwXIfr" aria-label="Facebook" id="facebookLink" target="_blank"><i class="fa fa-facebook"></i></a>
+            <!-- TODO: WhatsApp 链接 -->
+            <a href="#" aria-label="WhatsApp" target="_blank" rel="noopener"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+          </div>
+        </div>
+        
+        <!-- Quick Links -->
+        <div class="footer-column">
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        
+        <!-- Contact Info -->
+        <div class="footer-column">
+          <h3>Contact Us</h3>
+          <div class="footer-manager">
+            <span class="footer-manager-name">Simon Lim<small>Global Sales Manager</small></span>
+            <div class="footer-manager-btns">
+              <!-- TODO: Simon Lim Facebook 链接 -->
+              <a href="#" class="footer-pill" aria-label="Simon Lim on Facebook" target="_blank" rel="noopener"><i class="fa fa-facebook"></i></a>
+              <!-- TODO: Simon Lim WhatsApp 链接 -->
+              <a href="#" class="footer-pill footer-pill-wa" aria-label="Simon Lim on WhatsApp" target="_blank" rel="noopener"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+            </div>
+          </div>
+          <div class="footer-manager">
+            <span class="footer-manager-name">Kelvin Lim<small>US Sales Manager</small></span>
+            <div class="footer-manager-btns">
+              <!-- TODO: Kelvin Lim Facebook 链接 -->
+              <a href="#" class="footer-pill" aria-label="Kelvin Lim on Facebook" target="_blank" rel="noopener"><i class="fa fa-facebook"></i></a>
+              <!-- TODO: Kelvin Lim WhatsApp 链接 -->
+              <a href="#" class="footer-pill footer-pill-wa" aria-label="Kelvin Lim on WhatsApp" target="_blank" rel="noopener"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Email us -->
+        <div class="footer-column">
+          <h3>Email Us for Details</h3>
+          <p>Get the latest products, pricing and offers.</p>
+          <a href="mailto:qwerty65142026@outlook.com" class="footer-email-link">
+            <i class="fa fa-envelope" aria-hidden="true"></i>qwerty65142026@outlook.com
+          </a>
+        </div>
+      </div>
+      
+      <!-- Bottom Footer -->
+      <div class="footer-bottom">
+        <p>&copy; 2025 Better Electronics. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+
+  <!-- SKU search logic (merged from former sku.html) -->
+  <div class="sku-notification" id="notification"><p id="notificationMessage"></p></div>
+  <script>
+    let skuData = [];
+    let currentBrand = '';
+
+    function showNotification(message, isError = false) {
+      const n = document.getElementById('notification');
+      document.getElementById('notificationMessage').textContent = message;
+      n.className = 'sku-notification ' + (isError ? 'error' : 'success') + ' show';
+      setTimeout(() => n.classList.remove('show'), 3000);
+    }
+
+    async function loadSkuData() {
+      try {
+        const response = await fetch('data/sku-data.json');
+        if (!response.ok) throw new Error('HTTP ' + response.status);
+        const jsonData = await response.json();
+        skuData = jsonData.map(item => ({
+          brand: item.Brand || item.brand || '',
+          type: item.TYPE || item.type || '',
+          stock: item.Stock || item.stock || 'on US stock'
+        }));
+      } catch (e) {
+        console.error('SKU data load failed, using fallback:', e);
+        skuData = [
+          { brand: 'Acer', type: 'ACER 50.29WH AP18C8K', stock: 'on US stock' },
+          { brand: 'Acer', type: 'ACER 58.75WH AP18E7M', stock: 'on US stock' },
+          { brand: 'ASUS', type: 'Asus 38wh C21N1518', stock: 'on US stock' },
+          { brand: 'ASUS', type: 'Asus 50Wh C21N1818', stock: 'on US stock' },
+          { brand: 'ASUS', type: 'Asus 62WH C41N2013', stock: 'on US stock' },
+          { brand: 'DELL', type: 'DELL 58Wh FK0VR', stock: 'on US stock' },
+          { brand: 'DELL', type: 'DELL 54wh R73TC', stock: 'on US stock' },
+          { brand: 'DELL', type: 'DELL 68Wh H5H20-Y', stock: 'on US stock' },
+          { brand: 'DELL', type: 'Dell TVKGH-Y', stock: 'on US stock' },
+          { brand: 'HP', type: 'HP 72.9wh BN06XL', stock: 'on US stock' },
+          { brand: 'HP', type: 'HP 96wh AI06XL', stock: 'on US stock' },
+          { brand: 'HP', type: 'HP 52.5Wh SS03XL', stock: 'on US stock' },
+          { brand: 'Lenovo', type: 'LENOVO L19M3PD3', stock: 'on US stock' },
+          { brand: 'Lenovo', type: 'LENOVO 60WH L14M4P72', stock: 'on US stock' },
+          { brand: 'Lenovo', type: 'Lenovo 81Wh L23B2PK0', stock: 'on US stock' },
+          { brand: 'Panasonic', type: 'Panasonic 87WH CF-VZSU46', stock: 'on US stock' },
+          { brand: 'Apple', type: 'Mac A2171', stock: 'on US stock' },
+          { brand: 'Apple', type: 'Mac A1820', stock: 'on US stock' }
+        ];
+      }
+      renderSkuTable();
+    }
+
+    function renderSkuTable() {
+      const tbody = document.getElementById('skuTableBody');
+      const title = document.getElementById('brandTitle');
+      const empty = document.getElementById('skuEmpty');
+      tbody.innerHTML = '';
+
+      const filtered = currentBrand
+        ? skuData.filter(i => i.brand.toLowerCase() === currentBrand.toLowerCase())
+        : skuData;
+
+      title.textContent = currentBrand ? currentBrand + ' SKUs' : 'All SKUs';
+      empty.hidden = filtered.length > 0;
+
+      filtered.forEach(item => {
+        const row = document.createElement('tr');
+        row.innerHTML = `
+          <td>${item.brand}</td>
+          <td>${item.type}</td>
+          <td class="sku-stock">${item.stock}</td>
+          <td><button type="button" class="sku-view-btn" data-type="${item.type}">View Details</button></td>
+        `;
+        tbody.appendChild(row);
+      });
+
+      tbody.querySelectorAll('.sku-view-btn').forEach(btn => {
+        btn.addEventListener('click', function () {
+          showNotification('Inquiry noted: ' + this.getAttribute('data-type') + ' — contact us for a quote.');
+        });
+      });
+    }
+
+    function setBrandFilter(brand, scroll) {
+      currentBrand = brand;
+      document.querySelectorAll('#brandFilter button').forEach(b => {
+        b.classList.toggle('active', b.getAttribute('data-brand') === brand);
+      });
+      renderSkuTable();
+      if (scroll) {
+        document.getElementById('sku-search').scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+
+    document.querySelectorAll('#brandFilter button').forEach(button => {
+      button.addEventListener('click', function () {
+        setBrandFilter(this.getAttribute('data-brand'), false);
+      });
+    });
+
+    // Live search dropdown
+    (function initSearch() {
+      const input = document.getElementById('skuSearch');
+      const results = document.getElementById('searchResults');
+
+      input.addEventListener('input', function () {
+        const q = this.value.toLowerCase().trim();
+        if (q.length < 2) { results.classList.remove('active'); return; }
+        const hits = skuData.filter(i =>
+          i.brand.toLowerCase().includes(q) || i.type.toLowerCase().includes(q)
+        ).slice(0, 12);
+        results.innerHTML = '';
+        if (hits.length === 0) {
+          results.innerHTML = '<div class="result-item">No results found</div>';
+        } else {
+          hits.forEach(item => {
+            const div = document.createElement('div');
+            div.className = 'result-item';
+            div.innerHTML = '<strong>' + item.brand + '</strong> — ' + item.type +
+              ' <span class="sku-stock">' + item.stock + '</span>';
+            div.addEventListener('click', function () {
+              input.value = item.brand + ' ' + item.type;
+              results.classList.remove('active');
+              setBrandFilter(item.brand, true);
+            });
+            results.appendChild(div);
+          });
+        }
+        results.classList.add('active');
+      });
+
+      document.addEventListener('click', function (e) {
+        if (!input.contains(e.target) && !results.contains(e.target)) {
+          results.classList.remove('active');
+        }
+      });
+    })();
+
+    // Deep link support: products.html?brand=Dell or #sku-search
+    window.addEventListener('DOMContentLoaded', function () {
+      loadSkuData();
+      const urlBrand = new URLSearchParams(window.location.search).get('brand');
+      if (urlBrand) {
+        setBrandFilter(urlBrand, false);
+      }
+    });
+  </script>
+</body>
+</html>
